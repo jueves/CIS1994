@@ -6,11 +6,10 @@
 #############
 # Variables #
 #############
+data_file_name = "DA2080"
 real_num_responses = 17616
-
-# Expeced num of characters per card in the poll.
-cells_per_card = {1:78, 2:79, 3:80, 4:78, 5:84} # For card 5, exclude anything over 84
-                                                # as there aren't proper labels.
+cells_per_card = {1:78, 2:79, 3:80, 4:78, 5:84} # Expected num of characters per
+                                                # card in the poll.
            
 #############                                                
 # Functions #
@@ -60,10 +59,10 @@ def get_header():
 # Data processing #
 ###################
 
-with open("DA2080", "r") as f:
+with open(data_file_name, "r") as f:
   num_responses = sum(1 for line in f)/5
 
-with open("DA2080", "r") as input_file:
+with open(data_file_name, "r") as input_file:
   if (num_responses != real_num_responses):
     raise Exception("Error in the number of responses. Expected {}, got {}".format(real_num_responses,
                                                                                    num_responses))
