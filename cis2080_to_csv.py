@@ -103,3 +103,5 @@ for card_num, value in multicolumns_dic["cards"].items():
 
 # Rearrange columns by name
 data = data.reindex(sorted(data.columns), axis=1)
+
+data.to_csv("cis2080.csv", sep=";", index=False)
