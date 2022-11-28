@@ -50,7 +50,7 @@ def get_header(cells_per_card):
   
   header = list()
   for key, value in cells_per_card.items():
-    card_header = ["T" + str(key) + "_" + str(i+1) for i in range(value)]
+    card_header = ["T" + str(key) + "_" + str(i+1).zfill(2) for i in range(value)]
       
     if (key != 1):
       # Drop first 10 headers
@@ -61,15 +61,13 @@ def get_header(cells_per_card):
   return(header)
 
 
-# def merge_cols(data, col_num, card_num):
-#   # To be developed
-#   # Get first T{card_num} column index and work on that.
-# 
-#   new_col_name = "T" + str(card_num) + "_" + str(col_num[0]) + "-" + str(col_num[-1])
-#   old_col_names =
-# 
-#   data[new_col_name] = data[[old_col_names]].agg(' '.join, axis=1)
-#   return(data)
+def merge_cols(data, col_nums, card_num):
+  new_col_name = "T" + str(card_num) + "_" + str(col_nums[0]).zfill(2) + "-" + str(col_nums[-1]).zfill(2)
+  old_col_names = ["T" + str(card_num) + "_" + str(x).zfill(2) for x in col_nums]
+
+  data[new_col_name] = data[old_col_names].agg(''.join, axis=1)
+  data = data.drop(columns=old_col_names)
+  return(data)
 
 
 ###################
@@ -99,8 +97,9 @@ data = pd.DataFrame(data_list, columns=get_header(cells_per_card))
 with open('multicolumns.json') as f:
   multicolumns_dic = json.load(f)
 
-# for card_num, value in multicolumns_dic["cards"].items():
-#   for key, col_nums in value.items():
-#     data = merge_cols(data, col_nums, card_num)
-#     print("Card number:", card_num,
-#           "\nColumns:", col_nums)
+for card_num, value in multicolumns_dic["cards"].items():
+  for key, col_nums in value.items():
+    data = merge_cols(data, col_nums, card_num)
+
+# Rearrange columns by name
+data = data.reindex(sorted(data.columns), axis=1)
