@@ -97,7 +97,7 @@ data = pd.DataFrame(data_list, columns=get_header(cells_per_card))
 with open('multicolumns.json') as f:
   multicolumns_dic = json.load(f)
 
-for card_num, value in multicolumns_dic["cards"].items():
+for card_num, value in multicolumns_dic.items():
   for key, col_nums in value.items():
     data = merge_cols(data, col_nums, card_num)
 

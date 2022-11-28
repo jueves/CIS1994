@@ -1,17 +1,52 @@
-{"Warning_note": "This file is still in progress. Not all columns have been checked.",
-  "cards": {
-    "1": {
+{"1": {
       "estudio": [1,2,3,4],
-      "cuestionario": [5,6,7,8,9]
+      "cuestionario": [5,6,7,8,9],
+      "tarjeta": [10, 11],
+      "region": [12, 13],
+      "provincia": [14, 15],
+      "municipio": [16, 17, 18],
+      "tam_habitat": [19, 20],
+      "distrito": [21, 22],
+      "seccion": [23, 24, 25],
+      "entrevistador": [26, 27, 28, 29],
+      "duracion": [31, 32],
+      "prob1": [33, 34],
+      "prob2": [35, 35],
+      "prob3": [37, 38],
+      "edad_fum": [53, 54],
+      "cigarr_dia": [57, 58],
+      "puros_sem": [59, 60]
     },
-    "2": {
-      
+
+ "2": {
+  
+  },
+ "3": {
+   "lugares_bebida": [14,15]
     },
-    "3": {
-      "lugares_bebida": [14,15]
-    },
-    "5": {
-      "peso_pond": [80, 81, 82, 83, 84]
+ "4": {
+   "num_pastillas": [76, 77]
+ },
+ "5": {
+   "num_pastillas51": [13, 14],
+   "num_pastillas52": [17, 18],
+   "num_pastillas53": [21, 22],
+   "ideologia": [24, 25],
+   "edad": [27, 28],
+   "hijos_menores": [30, 31],
+   "nivel_est": [33, 34],
+   "profesion": [37, 38, 39],
+   "sector_prof": [42, 43],
+   "ingresos": [44, 45],
+   "num_entrev": [51, 52],
+   "portero_impide": [53, 54],
+   "se_niegan": [55, 56],
+   "fallido_cuota": [57, 58],
+   "dia": [67, 68],
+   "mes": [69, 70],
+   "año": [71, 72],
+   "ocup_new": [74, 75],
+   "condicion_socioeconomica": [77, 78],
+   "peso_pond": [80, 81, 82, 83, 84]
     }
-  }
 }
