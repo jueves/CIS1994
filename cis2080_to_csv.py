@@ -1,7 +1,9 @@
 # This script transforms original data from CIS poll 2080 to csv.
-# The questionaire is structured in cards, and each card has several enumerated
-# single character answers.
+# The questionaire is structured in cards, and each card has several enumerated single character answers.
 # Output file cis2080.csv has a header with the structure "T" + card number + "_" + question number
+
+import pandas as pd
+import json
 
 #############
 # Variables #
@@ -15,9 +17,11 @@ cells_per_card = {1:78, 2:79, 3:80, 4:78, 5:84} # Expected num of characters per
 # Functions #
 #############
 def clean_card(card, card_num):
-      # Gets a card as a str and the expected number for this card.
-      # Enforces expected length and checks format.
-      # Then returns the updated card.
+      """
+      Gets a card as a str and the expected int number for this card.
+      Enforces expected length and checks format.
+      Returns the updated card.
+      """
       
       # Enforce min length
       extra_spaces = cells_per_card[card_num] - len(card)
@@ -37,22 +41,35 @@ def clean_card(card, card_num):
       return(card)
 
 
-def get_header():
-  header = ""
+def get_header(cells_per_card):
+  """
+  Returns a list of column names.
+  Each column label includes the card and the original column number as showed
+  in the questionaire.
+  """
+  
+  header = list()
   for key, value in cells_per_card.items():
     card_header = ["T" + str(key) + "_" + str(i+1) for i in range(value)]
       
     if (key != 1):
       # Drop first 10 headers
       card_header = card_header[10:]
-      header = header + ";"
-      
-    # Join in a single string
-    card_header = ";".join(card_header)
       
     header = header + card_header
       
-  return(header + "\n")
+  return(header)
+
+
+# def merge_cols(data, col_num, card_num):
+#   # To be developed
+#   # Get first T{card_num} column index and work on that.
+# 
+#   new_col_name = "T" + str(card_num) + "_" + str(col_num[0]) + "-" + str(col_num[-1])
+#   old_col_names =
+# 
+#   data[new_col_name] = data[[old_col_names]].agg(' '.join, axis=1)
+#   return(data)
 
 
 ###################
@@ -66,22 +83,24 @@ with open(data_file_name, "r") as input_file:
   if (num_responses != real_num_responses):
     raise Exception("Error in the number of responses. Expected {}, got {}".format(real_num_responses,
                                                                                    num_responses))
-  # Limit responses for testing:
-  #num_responses = 5
-  
-  with open("cis2080.csv", "a") as output_file:
-    # Add header
-    output_file.write(get_header())
+  # Read data as a nested list
+  data_list = list()
+  for i in range(int(num_responses)):
+    full_line = ""
+    for j in range(5):
+      card = input_file.readline()[:-1]
+      
+      full_line = full_line + clean_card(card, j+1)
     
-    # Add body
-    for i in range(int(num_responses)):
-      full_line = ""
-      for j in range(5):
-        card = input_file.readline()[:-1]
-        
-        full_line = full_line + clean_card(card, j+1)
-      
-      full_line_csv = ";".join([*full_line]) + "\n"
-      
-      # Save as csv line
-      output_file.write(full_line_csv)
+    data_list.append([*full_line])
+    
+data = pd.DataFrame(data_list, columns=get_header(cells_per_card))
+
+with open('multicolumns.json') as f:
+  multicolumns_dic = json.load(f)
+
+# for card_num, value in multicolumns_dic["cards"].items():
+#   for key, col_nums in value.items():
+#     data = merge_cols(data, col_nums, card_num)
+#     print("Card number:", card_num,
+#           "\nColumns:", col_nums)
