@@ -42,9 +42,23 @@ mean zero.
 Not specified in the documentation.
 
 For people who never smoked, the answer for the number of cigarettes a day is `-8`.
-We asume this as an NA value.
+We assume this as an NA value.
+
+In amount of beverages, 9 is considered a NA.
 
 ## Other codes for "no"
 In some questions, such as telling if they have taken a specific medicament, many answers have been
 coded as `0`, although the questionnaire specifically codes them as `1`, `2` and `9`. We assume
 that this means "No".
+
+
+## UBEs
+[USA National Institutes for Health](https://www.niaaa.nih.gov/alcohols-effects-health/overview-alcohol-consumption/what-standard-drink)
+[Standard Drinks in Spain (UBEs)](https://doi.org/10.20882/adicciones.621)
+
+### Standard Drinks Spanish
+1 beer = 1 Standard Drink  
+1 glass of wine = 1 Standard Drink  
+1 glass of spirits = 2 Standard Drinks
+
+Vermouth is considered as a spirit.
