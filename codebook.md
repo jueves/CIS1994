@@ -53,29 +53,23 @@ that this means "No".
 
 
 ## UBEs
-[USA National Institutes for Health](https://www.niaaa.nih.gov/alcohols-effects-health/overview-alcohol-consumption/what-standard-drink)
-[Standard Drinks in Spain (UBEs)](https://doi.org/10.20882/adicciones.621)
+This is a variable that represents the number of [standard drinks](https://www.niaaa.nih.gov/alcohols-effects-health/overview-alcohol-consumption/what-standard-drink) the person had during the last thursday, friday and saturday. It's labelled as its Spanish acronym "Unidades de Bebida Estándar (UBE)".
 
-### Standard Drinks Spanish
+### Reference for Standard Drinks in Spain
+As alcohol is drank in different containers and concentrations depending on the culture, a [spaniard reference](https://doi.org/10.20882/adicciones.621) is used.
+
 1 beer = 1 Standard Drink  
 1 glass of wine = 1 Standard Drink  
 1 glass of spirits = 2 Standard Drinks
 
 Vermouth is considered as a spirit.
 
-## Income
-Original answers include ranges, but for numeric computation concrete values have been assigned as shown in this table.
+## Population
+The population is given in ranges. For quantitative computation the central value of each range is assigned to each one.  
+For the last range "Over 1 million people", the chosen value is a rounded average of the two Spaniard cities with populations over 1 million.
 
-| Original range            | Assigned value |
-|---------------------------|----------------|
-| Under 50.000 ptas         | 25000          |
-| 50.001 to 100.000 ptas    | 75000          |
-| 100.001 to 150.000 ptas   | 125000         |
-| 150.001 to 200.000 ptas   | 175000         |
-| 200.001 to 300.000 ptas   | 250000         |
-| 300.001 to 400.000 ptas   | 350000         |
-| 400.001 to 500.000 ptas   | 450000         |
-| 500.001 to 750.000 ptas   | 625000         |
-| 750.001 to 1.000.000 ptas | 875000         |
-| Over 1.000.000 ptas       | 1250000        |
-| No answer                 | Pandas NA      |`
+## Income
+As with population, income comes in ranges, that are replaced with numeric values.  
+For the first range, "Under 50.000 ptas", the minimum wage at the poll year is chosen.
+The next ranges the middle value of each interval is assigned.
+The last range, "Over 1 million ptas" is replaced with 1.250.000, which preserves the 250.000 step between the previous intervals.
