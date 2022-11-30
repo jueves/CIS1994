@@ -38,3 +38,24 @@ def get_ube(row):
 
 data["UBE"] = data.apply(get_ube, axis=1)
 
+# List complete variables
+with open("descriptive_var_names.json") as f:
+  var_names = json.load(f)
+
+for key, value in var_names.items():
+  if (value["description"] != "incomplete"):
+    print(key + " " + value["name"])# + "\n" + value["description"] + "\n")
+    
+# Rename selected variables
+new_names = []
+for code in data.columns:
+  if (code in var_names.keys() and var_names[code]["description"] != "incomplete"):
+    new_names.append(var_names[code]["name"])
+    print(var_names[code]["name"])
+  else:
+    new_names.append(code)
+
+data.columns = new_names
+
+# Set data types
+
