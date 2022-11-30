@@ -38,5 +38,3 @@ def get_ube(row):
 
 data["UBE"] = data.apply(get_ube, axis=1)
 
-# Income
-
