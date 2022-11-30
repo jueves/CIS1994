@@ -62,3 +62,20 @@ that this means "No".
 1 glass of spirits = 2 Standard Drinks
 
 Vermouth is considered as a spirit.
+
+## Income
+Original answers include ranges, but for numeric computation concrete values have been assigned as shown in this table.
+
+| Original range            | Assigned value |
+|---------------------------|----------------|
+| Under 50.000 ptas         | 25000          |
+| 50.001 to 100.000 ptas    | 75000          |
+| 100.001 to 150.000 ptas   | 125000         |
+| 150.001 to 200.000 ptas   | 175000         |
+| 200.001 to 300.000 ptas   | 250000         |
+| 300.001 to 400.000 ptas   | 350000         |
+| 400.001 to 500.000 ptas   | 450000         |
+| 500.001 to 750.000 ptas   | 625000         |
+| 750.001 to 1.000.000 ptas | 875000         |
+| Over 1.000.000 ptas       | 1250000        |
+| No answer                 | Pandas NA      |`

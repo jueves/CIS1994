@@ -1,54 +1,841 @@
 {
-  "T1_01-04": "estudio",
-  "T1_05-09": "cuestionario",
-  "T1_10-11": "tarjeta",
-  "T1_12-13": "region",
-  "T1_14-15": "provincia",
-  "T1_16-18": "municipio",
-  "T1_19-20": "tam_habitat",
-  "T1_21-22": "distrito",
-  "T1_23-25": "seccion",
-  "T1_26-29": "entrevistador",
-  "T1_31-32": "duracion",
-  "T1_33-34": "prob1",
-  "T1_35-35": "prob2",
-  "T1_37-38": "prob3",
-  "T1_53-54": "edad_fum",
-  "T1_57-58": "cigarr_dia",
-  "T1_59-60": "puros_sem",
-  "T3_14-15": "lugares_bebida",
-  "T4_76-77": "num_analgesicos",
-  "T5_13-14": "num_benzodiacepina",
-  "T5_17-18": "num_barbiturico",
-  "T5_21-22": "num_anfetam",
-  "T5_24-25": "ideologia",
-  "T5_27-28": "edad",
-  "T5_30-31": "hijos_menores",
-  "T5_33-34": "estudios_old",
-  "T5_37-39": "profesion",
-  "T5_42-43": "sector_prof_old",
-  "T5_44-45": "ingresos",
-  "T5_51-52": "num_entrev",
-  "T5_53-54": "portero_impide",
-  "T5_55-56": "se_niegan",
-  "T5_57-58": "fallido_cuota",
-  "T5_67-68": "dia",
-  "T5_69-70": "mes",
-  "T5_71-72": "agno",
-  "T5_74-75": "ocup_new",
-  "T5_77-78": "condicion_socioeconomica",
-  "T5_80-84": "peso_pond",
-  "T1_13": "alcohol_acomp",
-  "T4_32": "cannabis",
-  "T4_33": "cocaina",
-  "T4_34": "heroina",
-  "T4_35": "crack",
-  "T4_36": "pastillas",
-  "T5_26": "sexo",
-  "T5_29": "est_civil",
-  "T5_32": "escuela",
-  "T5_35": "princip_ingresos",
-  "T5_73": "estudios",
-  "T5_76": "rama",
-  "T5_79": "estatus"
+  "T1_01-04": {
+    "nombre": "estudio",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_05-09": {
+    "nombre": "cuestionario",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_10-11": {
+    "nombre": "tarjeta",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_12-13": {
+    "nombre": "region",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_14-15": {
+    "nombre": "provincia",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_16-18": {
+    "nombre": "municipio",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_19-20": {
+    "nombre": "tam_habitat",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_21-22": {
+    "nombre": "distrito",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_23-25": {
+    "nombre": "seccion",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_26-29": {
+    "nombre": "entrevistador",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_31-32": {
+    "nombre": "duracion",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_33-34": {
+    "nombre": "prob1",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_35-35": {
+    "nombre": "prob2",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_37-38": {
+    "nombre": "prob3",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_53-54": {
+    "nombre": "edad_fum",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_57-58": {
+    "nombre": "cigarr_dia",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T1_59-60": {
+    "nombre": "puros_sem",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T3_14": {
+    "nombre": "lugar_bebida1",
+    "name": "drink_loc1",
+    "description": "Usual drinking location 1",
+    "valores": {
+      1: "Hogar",
+      2: "Casas de amigos",
+      3: "Bares, pubs y cafeterías",
+      4: "Discotecas";
+      5: "Restaurantes"
+      6: "Trabajo":
+      9: "N.C."
+    },
+    "values": {
+      1: "Home",
+      2: "Friend's home",
+      3: "Pubs and caffeterias",
+      4: "Night clubs",
+      5: "Restaurants",
+      6: "Work",
+      9: "No answer"
+    }
+  },
+  "T3_15": {
+    "nombre": "lugar_bebida2",
+    "name": "drink_loc2",
+    "description": "Usual drinking location 2",
+    "valores": {
+      1: "Hogar",
+      2: "Casas de amigos",
+      3: "Bares, pubs y cafeterías",
+      4: "Discotecas";
+      5: "Restaurantes"
+      6: "Trabajo":
+      9: "N.C."
+    },
+    "values": {
+      1: "Home",
+      2: "Friend's home",
+      3: "Pubs and caffeterias",
+      4: "Night clubs",
+      5: "Restaurants",
+      6: "Work",
+      9: "No answer"
+    }
+  },
+  "T4_76-77": {
+    "nombre": "num_analgesicos",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_13-14": {
+    "nombre": "num_benzodiacepina",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_17-18": {
+    "nombre": "num_barbiturico",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_21-22": {
+    "nombre": "num_anfetam",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_24-25": {
+    "nombre": "ideologia",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_27-28": {
+    "nombre": "edad",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_30-31": {
+    "nombre": "hijos_menores",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_33-34": {
+    "nombre": "estudios_old",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_37-39": {
+    "nombre": "profesion",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_42-43": {
+    "nombre": "sector_prof_old",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_44-45": {
+    "nombre": "ingresos",
+    "name": "income",
+    "description": "Real values are ranges. See codebook.",
+    "valores": {
+      "01": 25000,
+      "02": 75000,
+      "03": 125000,
+      "04": 175000,
+      "05": 250000,
+      "06": 350000,
+      "07": 450000,
+      "08": 625000,
+      "09": 875000
+      "10": 1250000,
+      "99": pd.NA
+    },
+    "values": {
+      "01": 25000,
+      "02": 75000,
+      "03": 125000,
+      "04": 175000,
+      "05": 250000,
+      "06": 350000,
+      "07": 450000,
+      "08": 625000,
+      "09": 875000
+      "10": 1250000,
+      "99": pd.NA    }
+  },
+  "T5_51-52": {
+    "nombre": "num_entrev",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_53-54": {
+    "nombre": "portero_impide",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_55-56": {
+    "nombre": "se_niegan",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_57-58": {
+    "nombre": "fallido_cuota",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_67-68": {
+    "nombre": "Día",
+    "name": "day",
+    "description": "Interview day"
+    },
+  "T5_69-70": {
+    "nombre": "Mes",
+    "name": "month",
+    "description": "Interview month"
+  },
+  "T5_71-72": {
+    "nombre": "Año",
+    "name": "year",
+    "description": "Interview year"
+  },
+  "T5_74-75": {
+    "nombre": "Ocupación",
+    "name": "occupation",
+    "description": "Grouped ocupation. Non clear short names. The original Spanish categories can be found under 'valores' in this json.",
+    "valores": {
+      1: "Profesionales, técnicos y similares",
+      2: "Miembros del Gobierno, altos directivos, Administración Pública y empresa privada",
+      3: "Propietarios y gerentes de hostelería, comercio y agricultura",
+      4: "Cuadros medios",
+      5: "Capataces y personal encargado en actividades de servicios personales",
+      6: "Personal administrativo y similar",
+      7: "Comerciantes, vendedores y similares",
+      8: "Personal de los servicios",
+      9: "Trabajadores cualificados y semicualificados",
+      10: "Trabajadores agrícolas y no cualificados no agrícolas",
+      11: "Profesionales de las Fuerzas Armada",
+      98: "Sin información suficiente",
+      99: "N.C."
+    },
+    "values": {
+      1: "Profesionals",
+      2: "Executives",
+      3: "Business owners",
+      4: "Middle management",
+      5: "Lower management",
+      6: "Administrative personnel",
+      7: "Retailers",
+      8: "Service workers",
+      9: "Skilled workers",
+      10: "Farmers",
+      11: "Army",
+      98: "Not enough information",
+      99: "No answer"
+    }
+  },
+  "T5_77-78": {
+    "nombre": "Condición socioeconomica",
+    "name": "socioeconomic_condition",
+    "description": "Socioeconomic condition, job status.",
+    "valores": {
+      1: "Directores/as y profesionales",
+      2: "Técnicos/as y cuadros medios"
+      3: "Pequeños/as empresarios/as",
+      4: "Agricultores/as",
+      5: "Empleados/as de oficinas y servicios",
+      6: "Obreros/as cualificados/as",
+      7: "Obreros/as no cualificados/as",
+      8: "Jubilados/as y pensionistas",
+      9: "Parados/as",
+      10: "Estudiantes",
+      11: "Trabajo doméstico no remunerado",
+      12: "No clasificables"
+    },
+    "values": {
+      1: "Managers and professionals",
+      2: "Technicians and middle management"
+      3: "Small business owners",
+      4: "Farmers",
+      5: "Office and servicies workers",
+      6: "Skilled workers",
+      7: "Non-skilled workers",
+      8: "Retirees and pensioners",
+      9: "Unemployed",
+      10: "Students",
+      11: "Non payed housekeeping",
+      12: "Other"
+    }
+  },
+  "T5_80-84": {
+    "nombre": "peso_pond",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T4_32": {
+    "nombre": "cannabis",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T4_33": {
+    "nombre": "cocaina",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T4_34": {
+    "nombre": "heroina",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T4_35": {
+    "nombre": "crack",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T4_36": {
+    "nombre": "pastillas",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_26": {
+    "nombre": "Sexo",
+    "name": "sex",
+    "description": "",
+    "valores": {
+      1: "Hombre",
+      2: "Mujer"
+    },
+    "values": {
+      1: "male",
+      2: "female"
+    }
+  },
+  "T5_29": {
+    "nombre": "est_civil",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_32": {
+    "nombre": "escuela",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_35": {
+    "nombre": "princip_ingresos",
+    "name": "",
+    "description": "incomplete",
+    "valores": {
+      1: 1,
+      2: 2,
+      3: 3
+    },
+    "values": {
+      1: 1,
+      2: 2,
+      3: 3
+    }
+  },
+  "T5_73": {
+    "nombre": "estudios",
+    "name": "Education level",
+    "description": "Interviewed person level of studies",
+    "valores": {
+      1: "Sin estudios",
+      2: "Primaria",
+      3: "Secundaria",
+      4: "F.P.",
+      5: "Medios universitarios",
+      6: "Superiores",
+      7: "Otros no reglados",
+      9: "N.C."
+      ^},
+    "values": {
+      1: "None",
+      2: "Elementary school",
+      3: "High school",
+      4: "Vocational trainning",
+      5: "Graduate's degree",
+      6: "Bachelor's degree",
+      7: "Other",
+      9: "No answer"
+    }
+  },
+  "T5_76": {
+    "nombre": "Rama",
+    "name": "sector",
+    "description": "Professional sector",
+    "valores": {
+      1: "Agricultura",
+      2: "Industria",
+      3: "Construcción",
+      4: "Servicios",
+      8: "N.S.",
+      9: "N.C."
+    },
+    "values": {
+      1: "Agriculture",
+      2: "Industry",
+      3: "Construction",
+      4: "Servicies",
+      8: "Unknown",
+      9: "No response"
+    }
+  },
+  "T5_79": {
+    "nombre": "Estatus socioeconómico",
+    "name": "status",
+    "description": "Socioeconomic status",
+    "valores": {
+      1: "Clase alta/media-alta",
+      2: "Nuevas clases medias",
+      3: "Viejas clases medias",
+      4: "Obreros cualificados",
+      5: "Obreros no cualificados",
+      9: "No consta"
+    },
+    "values": {
+      1: "Upper/Upper-middle class",
+      2: "New middle class",
+      3: "Old middle class",
+      4: "Skilled workers",
+      5: "Non-skilled workers",
+      9: "No information"
+    }
+  }
 }
