@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-data = pd.read_csv("cis2080.csv", sep=";", na_values=" ", decimal=",")
+data = pd.read_csv("cis2080.csv", sep=";", na_values=[" ", " "*2, "-8", "99"], decimal=",")
 
 # Add UBE
 # Standard Drinks, also known as Unidades de Bebida Estándar (UBE)
@@ -42,20 +42,56 @@ data["UBE"] = data.apply(get_ube, axis=1)
 with open("descriptive_var_names.json") as f:
   var_names = json.load(f)
 
-for key, value in var_names.items():
-  if (value["description"] != "incomplete"):
-    print(key + " " + value["name"])# + "\n" + value["description"] + "\n")
-    
+def get_names():
+  for key, value in var_names.items():
+    if (value["description"] != "incomplete"):
+      print(key + " " + value["name"])# + "\n" + value["description"] + "\n")
+
 # Rename selected variables
 new_names = []
 for code in data.columns:
   if (code in var_names.keys() and var_names[code]["description"] != "incomplete"):
     new_names.append(var_names[code]["name"])
-    print(var_names[code]["name"])
   else:
     new_names.append(code)
 
 data.columns = new_names
 
 # Set data types
+# Income
+for key, value in var_names["T5_44-45"]["values"].items():
+  if (value == "NA"):
+    value = pd.NA
+    
+  data.income = data.income.replace(float(key), value)
 
+# # Drink location
+# data.drink_loc1 = data.drink_loc1.replace([0, 9], pd.NA)
+# data.drink_loc2 = data.drink_loc2.replace([0, 9], pd.NA)
+# 
+# # Occupation
+# # 98 = not enough information
+# data.occupation = data.occupation.replace(98, pd.NA)
+# 
+# # Socioeconomic condition
+# data.socioeconomic_condition = data.socioeconomic_condition.replace(12, pd.NA)
+# 
+# # Sex
+# data.sex = data.sex.replace(9, pd.NA)
+
+# Sector
+
+# Set NAs
+def set_NAs(var_dict):
+  for key, value in var_dict.items():
+    data[key] = data[key].replace(value, pd.NA)
+    
+set_NAs({
+  "drink_loc1": [0, 9],
+  "drink_loc2": [0, 9],
+  "occupation": 98,
+  "socioeconomic_condition": 12,
+  "sex": 9,
+  "sector": 9,
+  "status": 9
+})
