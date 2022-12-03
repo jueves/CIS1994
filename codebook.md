@@ -44,7 +44,9 @@ Not specified in the documentation.
 For people who never smoked, the answer for the number of cigarettes a day is `-8`.
 We assume this as an NA value.
 
-In amount of beverages, 9 is considered a NA.
+In several variables, like amount of beverages or drinkin location, 9 is considered a NA.
+
+99 is also used to code "No answer".
 
 ## Other codes for "no"
 In some questions, such as telling if they have taken a specific medicament, many answers have been

@@ -795,7 +795,7 @@
   },
   "T5_73": {
     "nombre": "estudios",
-    "name": "Education level",
+    "name": "education_level",
     "description": "Interviewed person level of studies",
     "valores": {
       "1": "Sin estudios",
