@@ -58,29 +58,6 @@ for code in data.columns:
 data.columns = new_names
 
 # Set data types
-# Income
-for key, value in var_names["T5_44-45"]["values"].items():
-  if (value == "NA"):
-    value = pd.NA
-    
-  data.income = data.income.replace(float(key), value)
-
-# # Drink location
-# data.drink_loc1 = data.drink_loc1.replace([0, 9], pd.NA)
-# data.drink_loc2 = data.drink_loc2.replace([0, 9], pd.NA)
-# 
-# # Occupation
-# # 98 = not enough information
-# data.occupation = data.occupation.replace(98, pd.NA)
-# 
-# # Socioeconomic condition
-# data.socioeconomic_condition = data.socioeconomic_condition.replace(12, pd.NA)
-# 
-# # Sex
-# data.sex = data.sex.replace(9, pd.NA)
-
-# Sector
-
 # Set NAs
 def set_NAs(var_dict):
   for key, value in var_dict.items():
@@ -89,9 +66,29 @@ def set_NAs(var_dict):
 set_NAs({
   "drink_loc1": [0, 9],
   "drink_loc2": [0, 9],
+  "political_espectrum": 98,
   "occupation": 98,
   "socioeconomic_condition": 12,
   "sex": 9,
   "sector": 9,
   "status": 9
 })
+
+
+def get_numeric_keys(dictionary):
+  # Gets a dictionary with string keys and returns
+  # a similar dictionary with integer keys.
+  new_dic = {}
+  for key, value in dictionary.items():
+    new_dic[int(key)] = value
+  return(new_dic)
+
+# Assign labels
+for key, value in var_names.items():
+  if (value["description"] != "incomplete" and "values" in value.keys()):
+    numeric_dic = get_numeric_keys(value['values'])
+    data[value['name']] = data[value['name']].map(numeric_dic)
+    if (isinstance(list(value["values"].values())[0], str)):
+      # Apply categorical
+      print(value["name"])
+
