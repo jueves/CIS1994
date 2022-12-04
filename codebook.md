@@ -72,6 +72,6 @@ For the last range "Over 1 million people", the chosen value is a rounded averag
 
 ## Income
 As with population, income comes in ranges, that are replaced with numeric values.  
-For the first range, "Under 50.000 ptas", the minimum wage at the poll year is chosen.
-The next ranges the middle value of each interval is assigned.
+For the first range, "Under 50.000 ptas", ~~the minimum wage at the poll year is chosen.~~
+In the next ranges the middle value of each interval is assigned.
 The last range, "Over 1 million ptas" is replaced with 1.250.000, which preserves the 250.000 step between the previous intervals.
