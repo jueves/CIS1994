@@ -90,5 +90,9 @@ for key, value in var_names.items():
     data[value['name']] = data[value['name']].map(numeric_dic)
     if (isinstance(list(value["values"].values())[0], str)):
       # Apply categorical
-      print(value["name"])
+      is_ordered = value["ordered"] == "True"
+      data[value['name']] = pd.Categorical(data[value["name"]],
+                                           categories=list(value["values"].values()),
+                                           ordered=is_ordered)
+
 
