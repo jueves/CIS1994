@@ -57,13 +57,14 @@ for code in data.columns:
 
 data.columns = new_names
 
-# Set data types
 # Set NAs
 def set_NAs(var_dict):
   for key, value in var_dict.items():
     data[key] = data[key].replace(value, pd.NA)
     
 set_NAs({
+  "cigarettes": 0,
+  "cigars": 0,
   "drink_loc1": [0, 9],
   "drink_loc2": [0, 9],
   "political_espectrum": 98,
