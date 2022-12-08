@@ -490,20 +490,19 @@
   "T5_44-45": {
     "nombre": "ingresos",
     "name": "income",
-    "description": "Real values are ranges. See codebook.",
-    "ordered": "True",
+    "description": "Monthly income. Real values are ranges as seen under 'valores'.",
     "valores": {
-      "10": 1250000,
-      "99": "NA",
-      "01": 25000,
-      "02": 75000,
-      "03": 125000,
-      "04": 175000,
-      "05": 250000,
-      "06": 350000,
-      "07": 450000,
-      "08": 625000,
-      "09": 875000
+      "01": "Menos de 50.000 pts.",
+      "02": "De 50.001 a 100.000 pts.",
+      "03": "De 100.001 a 150.000 pts.",
+      "04": "De 150.001 a 200.000 pts.",
+      "05": "De 200.001 a 300.000 pts.",
+      "06": "De 300.001 a 400.000 pts.",
+      "07": "De 400.001 a 500.000 pts",
+      "08": "De 500.001 a 750.000 pts.",
+      "09": "De 750.001 a 1 Millón de pts.",
+      "10": "Más de 1 Millón de pts.",
+      "99": "NA"
     },
     "values": {
       "10": 1250000,
