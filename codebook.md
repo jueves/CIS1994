@@ -10,14 +10,6 @@ indicating card number and original column number, as labelled on the original q
 For answers comprising multiple characters, these have been merged. For example, `T5_26` means
 column 26 on card 5. While `T1_1-4` means columns 1 to 4, both inclusive, on card 1.
 
-| Coded column name | Long name      | Description |
-|-------------------|----------------|-------------|
-| T5_26             | sex            |             |
-| T5_27-28          | age            |             |
-| T5_29             | marital_status |             |
-| T5_30-31          | num_children   |             |
-
-
 ## Inconsistencies
 ### City code
 There aren't codes for every city or town in the provided documentation. Only for the largest
@@ -72,6 +64,5 @@ For the last range "Over 1 million people", the chosen value is a rounded averag
 
 ## Income
 As with population, income comes in ranges, that are replaced with numeric values.  
-For the first range, "Under 50.000 ptas", ~~the minimum wage at the poll year is chosen.~~
-In the next ranges the middle value of each interval is assigned.
-The last range, "Over 1 million ptas" is replaced with 1.250.000, which preserves the 250.000 step between the previous intervals.
+For all but the higher category, the middle value of each interval is assigned.
+On last range, "Over 1 million ptas" is replaced with 1.250.000, which preserves the 250.000 step between the previous intervals.

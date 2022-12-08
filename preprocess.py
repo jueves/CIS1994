@@ -94,6 +94,6 @@ for key, value in var_names.items():
       is_ordered = value["ordered"] == "True"
       data[value['name']] = pd.Categorical(data[value["name"]],
                                            categories=list(value["values"].values()),
-                                           ordered=is_ordered)
+                                           ordered=is_ordered).remove_unused_categories()
 
 
