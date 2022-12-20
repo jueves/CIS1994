@@ -66,3 +66,4 @@ For the last range "Over 1 million people", the chosen value is a rounded averag
 As with population, income comes in ranges, that are replaced with numeric values.  
 For all but the higher category, the middle value of each interval is assigned.
 On last range, "Over 1 million ptas" is replaced with 1.250.000, which preserves the 250.000 step between the previous intervals.
+

@@ -42,10 +42,27 @@ data["UBE"] = data.apply(get_ube, axis=1)
 with open("descriptive_var_names.json") as f:
   var_names = json.load(f)
 
-def get_names():
+def get_metadata(var_number = 0):
+  '''
+  If default value is given, returns an indexed list
+  of all variables with complete metadata.
+  
+  If one of those indexes is given as an argument, full metadata for that
+  variable is returned.
+  '''
+  var_descriptor = dict() # Index - Metadata dictionary
+  names_list = "" # Indexed list of variables
+  index = 0
   for key, value in var_names.items():
     if (value["description"] != "incomplete"):
-      print(key + " " + value["name"])# + "\n" + value["description"] + "\n")
+      index = index + 1
+      names_list = names_list + "\n" + str(index) + " - " + key + " " + value["name"]
+      var_descriptor[index] = var_names[key]
+
+  if (var_number in var_descriptor.keys()):
+    print(json.dumps(var_descriptor[var_number], indent=4, ensure_ascii=False))
+  else:
+    print(names_list)
 
 # Rename selected variables
 new_names = []

@@ -600,7 +600,7 @@
   "T5_74-75": {
     "nombre": "Ocupación",
     "name": "occupation",
-    "description": "Grouped ocupation. Non clear short names. The original Spanish categories can be found under 'valores' in this json.",
+    "description": "Interviewed grouped occupation. Original metadata describes this variable as 'recoded', seems to be a variable created years after the poll was done. Non clear short names. The original Spanish categories can be found under 'valores' in this json.",
     "ordered": "False",
     "valores": {
       "1": "Profesionales, técnicos y similares",
