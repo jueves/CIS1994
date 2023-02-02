@@ -35,20 +35,19 @@ def get_ube(row):
   ube = sum([drink_types[i] * drink_amounts[i] for i in range(len(drink_types))])
   return(ube)
   
-
 data["UBE"] = data.apply(get_ube, axis=1)
 
 # List complete variables
 with open("descriptive_var_names.json") as f:
   var_names = json.load(f)
 
-def get_metadata(var_number = 0):
+def get_metadata():
   '''
-  If default value is given, returns an indexed list
-  of all variables with complete metadata.
+  Returns an indexed list of all variables with complete
+  metadata and asks to choose an item.
   
-  If one of those indexes is given as an argument, full metadata for that
-  variable is returned.
+  Once the item is selected, it returns full metadata for
+  that variable.
   '''
   var_descriptor = dict() # Index - Metadata dictionary
   names_list = "" # Indexed list of variables
@@ -58,11 +57,14 @@ def get_metadata(var_number = 0):
       index = index + 1
       names_list = names_list + "\n" + str(index) + " - " + key + " " + value["name"]
       var_descriptor[index] = var_names[key]
+  
+  print(names_list + "\n")
+  var_number = int(input("Introduce the index of the variable to expand: "))
 
   if (var_number in var_descriptor.keys()):
-    print(json.dumps(var_descriptor[var_number], indent=4, ensure_ascii=False))
+    print("\n" + json.dumps(var_descriptor[var_number], indent=4, ensure_ascii=False))
   else:
-    print(names_list)
+    print("Introduce a valid index number.")
 
 # Rename selected variables
 new_names = []
