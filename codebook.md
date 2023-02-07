@@ -1,8 +1,8 @@
 # Codebook
-Data seems to be an SPSS dataset, but there is not explicit information available.  
-It seems that several CIS datasets fail to import with either [Haven](https://haven.tidyverse.org/) or [Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_spss.html)
-due to [this issue](https://github.com/tidyverse/haven/issues/683) in the [ReadStat](https://github.com/WizardMac/ReadStat) library. It has been already fixed,
-but not included yet (2/2/2023) in either Pandas or Haven.  
+Data seems to be an SPSS dataset, but there are not file extensions and I could not find documentation in the source.  
+It also seems that several CIS datasets fail to import with either [Haven](https://haven.tidyverse.org/) or [Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_spss.html)
+due to [this issue](https://github.com/tidyverse/haven/issues/683) in the [ReadStat](https://github.com/WizardMac/ReadStat) library.
+It has been already fixed, but not included yet (2/2/2023) in either Pandas or Haven.  
 I couldn't convert the data to other formats using the last version of ReadStat, so I wrote `cis2080_to_csv.py`.
 
 ## Original card structure
