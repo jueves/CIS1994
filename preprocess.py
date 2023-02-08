@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import pickle
 
 data = pd.read_csv("cis2080.csv", sep=";", na_values=[" ", " "*2, "-8", "99"], decimal=",")
 
@@ -116,3 +117,7 @@ for key, value in var_names.items():
                                            ordered=is_ordered).remove_unused_categories()
 
 
+# Save data and get_metadata() as a pickle object
+pickling_on = open("preprocessed_objs.pickle", "wb")
+pickle.dump((data, var_names, get_metadata), pickling_on)
+pickling_on.close()
