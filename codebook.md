@@ -44,7 +44,7 @@ We assume this as an NA value.
 
 In several variables, like amount of beverages or drinkin location, 9 is considered a NA.
 
-99 is also used to code "No answer".
+99 is sometimes used as number, sometimes used to code a "No answer" label and sometimes as an NA value.
 
 ## Other codes for "no"
 In some questions, such as telling if they have taken a specific medicament, many answers have been

@@ -2,7 +2,7 @@ import pandas as pd
 import json
 import pickle
 
-data = pd.read_csv("cis2080.csv", sep=";", na_values=[" ", " "*2, "-8", "99"], decimal=",")
+data = pd.read_csv("cis2080.csv", sep=";", na_values=[" ", " "*2, "-8"], decimal=",")
 
 # Add UBE
 # Standard Drinks, also known as Unidades de Bebida Estándar (UBE)
@@ -83,16 +83,17 @@ def set_NAs(var_dict):
     data[key] = data[key].replace(value, pd.NA)
     
 set_NAs({
-  "cigarettes": 0,
-  "cigars": 0,
+  #"cigarettes": 99,
+  #"cigars": 99,
   "drink_loc1": [0, 9],
   "drink_loc2": [0, 9],
-  "political_espectrum": 98,
-  "occupation": 98,
-  "socioeconomic_condition": 12,
+  "political_espectrum": [98, 99],
+  "income": 99,
+  #"occupation": 98,
+  #"socioeconomic_condition": 12,
   "sex": 9,
-  "sector": 9,
-  "status": 9
+  #"sector": 9,
+  #"status": 9
 })
 
 
@@ -117,7 +118,7 @@ for key, value in var_names.items():
                                            ordered=is_ordered).remove_unused_categories()
 
 
-# Save data and get_metadata() as a pickle object
+# Save data and var_names as a pickle object
 pickling_on = open("preprocessed_objs.pickle", "wb")
-pickle.dump((data, var_names, get_metadata), pickling_on)
+pickle.dump((data, var_names), pickling_on)
 pickling_on.close()
