@@ -12,7 +12,7 @@ This explores responses from a 1994 poll collected by Spain's sociologic researc
 
 ## This is a work in progress
 The data cleaning process is being documented in [codebook.md](https://github.com/jueves/CIS2080/blob/main/codebook.md).  
-You can see the data exploration in [Exploration.ipynb](https://github.com/jueves/CIS2080/blob/main/Exploration.ipynb)
+You can see the data exploration in [Exploration.ipynb](https://github.com/jueves/CIS2080/blob/main/notebooks/Exploration.ipynb)
 
 ## To do
 
