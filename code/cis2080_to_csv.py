@@ -8,7 +8,9 @@ import json
 #############
 # Variables #
 #############
-data_file_name = "DA2080"
+data_file_name = "../data/DA2080"
+csv_file_name = "../data/cis2080.csv"
+multicolumns_file_name = '../metadata/multicolumns.json'
 real_num_responses = 17616
 cells_per_card = {1:78, 2:79, 3:80, 4:78, 5:84} # Expected num of characters per
                                                 # card in the poll.
@@ -94,7 +96,7 @@ with open(data_file_name, "r") as input_file:
     
 data = pd.DataFrame(data_list, columns=get_header(cells_per_card))
 
-with open('multicolumns.json') as f:
+with open(multicolumns_file_name) as f:
   multicolumns_dic = json.load(f)
 
 for card_num, value in multicolumns_dic.items():
@@ -104,4 +106,4 @@ for card_num, value in multicolumns_dic.items():
 # Rearrange columns by name
 data = data.reindex(sorted(data.columns), axis=1)
 
-data.to_csv("cis2080.csv", sep=";", index=False)
+data.to_csv(csv_file_name, sep=";", index=False)

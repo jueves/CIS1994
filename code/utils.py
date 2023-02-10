@@ -7,7 +7,7 @@ utilities to make coding and data exploration more eficient.
 '''
 
 # Import labels
-with open("descriptive_var_names.json") as f:
+with open("../metadata/descriptive_var_names.json") as f:
   var_names = json.load(f)
 
 def get_metadata():
@@ -37,14 +37,14 @@ def get_metadata():
 
 def save_my_data(data):
   # Save data and var_names as a pickle object
-  pickling_on = open("preprocessed_objs.pickle", "wb")
+  pickling_on = open("../data/preprocessed_data.pickle", "wb")
   pickle.dump((data), pickling_on)
   pickling_on.close()
 
 
 def load_my_data():
   # Load preprocessed Pandas datadrame
-  pickle_off = open("preprocessed_objs.pickle", "rb")
+  pickle_off = open("../data/preprocessed_data.pickle", "rb")
   data = pickle.load(pickle_off)
   pickle_off.close()
   return(data)

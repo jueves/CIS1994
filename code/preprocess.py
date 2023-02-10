@@ -5,7 +5,7 @@ import json
 Labels data, sets pd.NA and creates UBE variable
 '''
 
-def get_preprocessed_data(data_file_name="cis2080.csv", labels_file_name="descriptive_var_names.json"):
+def get_preprocessed_data(data_file_name="../data/cis2080.csv", labels_file_name="../metadata/descriptive_var_names.json"):
   data = pd.read_csv(data_file_name, sep=";", na_values=[" ", " "*2, "-8"], decimal=",")
   data = label_data(data, labels_file_name)
   data["UBE"] = data.apply(get_ube, axis=1)
