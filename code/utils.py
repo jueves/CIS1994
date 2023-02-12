@@ -6,10 +6,14 @@ These functions are not needed for the project to work, but
 utilities to make coding and data exploration more eficient.
 '''
 
+pickle_filename = "../data/preprocessed_data.pickle"
+
 # Import labels
 with open("../metadata/descriptive_var_names.json") as f:
   var_names = json.load(f)
 
+
+# Functions
 def get_metadata():
   '''
   Returns an indexed list of all variables with complete
@@ -37,15 +41,24 @@ def get_metadata():
 
 def save_my_data(data):
   # Save data and var_names as a pickle object
-  pickling_on = open("../data/preprocessed_data.pickle", "wb")
+  pickling_on = open(pickle_filename, "wb")
   pickle.dump((data), pickling_on)
   pickling_on.close()
 
 
-def load_my_data():
+def load_my_data(subdata=False):
   # Load preprocessed Pandas datadrame
-  pickle_off = open("../data/preprocessed_data.pickle", "rb")
+  pickle_off = open(pickle_filename, "rb")
   data = pickle.load(pickle_off)
   pickle_off.close()
+
+  if subdata:
+    selected_vars = []
+    for value in var_names.values():
+        if (value["description"] != "incomplete"):
+            selected_vars.append(value["name"])
+
+    data = data[selected_vars].drop(columns=["day", "month", "year"])
+
   return(data)
 
