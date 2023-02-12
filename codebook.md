@@ -73,3 +73,24 @@ As with population, income comes in ranges, that are replaced with numeric value
 For all but the higher category, the middle value of each interval is assigned.
 On last range, "Over 1 million ptas" is replaced with 1.250.000, which preserves the 250.000 step between the previous intervals.
 
+## Impute missing data
+
+| name                | prop  | type | aproach   | comment                |
+| ------------------- | ----- | ---- | --------- | ---------------------- |
+| political_espectrum | 0.336 | num  | drop      | 34%                    |
+| income              | 0.319 | num  | drop      | 32%                    |
+| population          | 0.001 | num  | compute   | median in their region |
+| age                 | 0.003 | num  | compute   | median                 |
+| cigarettes          | 0.656 | num  | assign    | 0                      |
+| cigars              | 0.979 | num  | assign    | 0                      |
+| occupation          | 0.045 | cat  | assign    | N.C.                   |
+| drink_loc1          | 0.464 | cat  | assign    | N.C.                   |
+| drink_loc2          | 0.799 | cat  | assign    | N.C.                   |
+| sex                 | 0.001 | cat  | assign    | New label: "No answer" |
+| sector              | 0.035 | cat  | assign    | N.S.                   |
+
+# Impute political_spectrum and income
+Could I just impute a value? Are these people similar to the rest or a well diferenciated group?
+How many people results from exluding these two?
+
+For first version, drop these two variables.
