@@ -5,7 +5,7 @@ import json
 Labels data, sets pd.NA and creates UBE variable
 '''
 
-def get_preprocessed_data(data_file_name="../data/cis2080.csv", labels_file_name="../metadata/descriptive_var_names.json"):
+def get_preprocessed_data(data_file_name="./data/cis2080.csv", labels_file_name="./metadata/descriptive_var_names.json"):
   data = pd.read_csv(data_file_name, sep=";", na_values=[" ", " "*2, "-8"], decimal=",")
   data = label_data(data, labels_file_name)
   data["UBE"] = data.apply(get_ube, axis=1)
@@ -88,7 +88,7 @@ def label_data(data, labels_file_name):
   })
 
 
-  def get_numeric_keys(dictionary):
+  def get_numeric_dict(dictionary):
     # Gets a dictionary with string keys and returns
     # a similar dictionary with integer keys.
     new_dic = {}
@@ -97,14 +97,19 @@ def label_data(data, labels_file_name):
     return(new_dic)
 
   # Assign labels
-  for key, value in var_names.items():
-    if (value["description"] != "incomplete" and "values" in value.keys()):
-      numeric_dic = get_numeric_keys(value['values'])
-      data[value['name']] = data[value['name']].map(numeric_dic)
-      if (isinstance(list(value["values"].values())[0], str)):
+  for metadata in var_names.values():
+    if (metadata["description"] != "incomplete" and "values" in metadata.keys()):
+      # Convert dictionary keys from string to numeric
+      numeric_dict = get_numeric_dict(metadata['values'])
+
+      # Set values
+      data[metadata['name']] = data[metadata['name']].map(numeric_dict)
+
+      # Check if all values are strings.
+      if all(isinstance(value, str) for value in metadata["values"].values()):
         # Apply categorical
-        is_ordered = value["ordered"] == "True"
-        data[value['name']] = pd.Categorical(data[value["name"]],
-                                            categories=list(value["values"].values()),
+        is_ordered = metadata["ordered"] == "True"
+        data[metadata['name']] = pd.Categorical(data[metadata["name"]],
+                                            categories=list(metadata["values"].values()),
                                             ordered=is_ordered).remove_unused_categories()
   return(data)
