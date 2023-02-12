@@ -53,12 +53,13 @@ def load_my_data(subdata=False):
   pickle_off.close()
 
   if subdata:
-    selected_vars = []
+    selected_vars = ["UBE"] # UBE is not in var_names dictionary
     for value in var_names.values():
         if (value["description"] != "incomplete"):
             selected_vars.append(value["name"])
 
     data = data[selected_vars].drop(columns=["day", "month", "year"])
+
 
   return(data)
 
