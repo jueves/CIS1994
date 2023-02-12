@@ -18,4 +18,5 @@ You can see the data exploration in [Exploration.ipynb](https://github.com/jueve
 
 - [ ] Improve notebook explanations.
 - [ ] Explore answers per socioeconomic condition.
-- [ ] Develop a RandomForestClassifier.
+- [x] Develop a RandomForestRegressor.
+- [ ] Improve model predictions.
