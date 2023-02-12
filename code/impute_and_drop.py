@@ -1,7 +1,3 @@
-import utils
-
-data = utils.load_my_data(True)
-
 # Values to impute on missing data per variable
 imputing_dic = {
     "cigarettes":0,

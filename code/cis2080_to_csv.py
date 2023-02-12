@@ -1,6 +1,8 @@
 # This script transforms original data from CIS poll 2080 to csv.
 # The questionaire is structured in cards, and each card has several enumerated single character answers.
 # Output file cis2080.csv has a header with the structure "T" + card number + "_" + question number
+#
+# Decisions made are documented in codebook.md
 
 import pandas as pd
 import json

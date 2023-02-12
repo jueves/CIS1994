@@ -3,6 +3,7 @@ import json
 
 '''
 Labels data, sets pd.NA and creates UBE variable
+Decisions made are documented in codebook.md
 '''
 
 def get_preprocessed_data(data_file_name="./data/cis2080.csv", labels_file_name="./metadata/descriptive_var_names.json"):
