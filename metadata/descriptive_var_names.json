@@ -1294,5 +1294,31 @@
             "2": 2,
             "3": 3
         }
+    },
+    "UBE": {
+        "nombre": "UBE",
+        "name": "UBE",
+        "description": "Standard Drinks, by its Spanish acronym: Unidades de Bebida Estándar (UBE)"
+    },
+    "UBEplus": {
+        "nombre": "UBEplus",
+        "name": "UBEplus",
+        "description": "Number of events with 8 or more drinks in the 3 days for which we have data."
+    },
+    "drinking_pattern": {
+        "nombre": "drinking_pattern",
+        "name": "drinking_pattern",
+        "description": "Type of drinker regarding the amount of alcohol.",
+        "ordered": "True",
+        "valores": {
+            "1": "Abstemio",
+            "2": "Bebedor",
+            "3": "Fuertemente bebedor"
+        },
+        "values": {
+            "1": "nondrinker",
+            "2": "drinker",
+            "3": "heavy_drinker"
+        }
     }
 }
