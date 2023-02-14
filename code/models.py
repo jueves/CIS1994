@@ -29,7 +29,14 @@ def RFC_train_and_evaluate(data, target, columns_to_drop, iterations=10):
 
 
 def dummy_model(y_train, X_test):
-    mode = pd.Series(y_train).mode()[0]
-    prediction = [mode]*len(X_test)
+    data = pd.Series(y_train)
+    
+    if isinstance(data.iloc[0], (int, float)):
+        value = data.median
+    else:
+        value = data.mode()[0]
+    
+    prediction = [value]*len(X_test)
+    
     return(prediction)
 
