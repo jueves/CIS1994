@@ -1,0 +1,15 @@
+CIS2080.Rproj
+.Rhistory
+.Rproj.user
+.RData
+.Renviron
+.ipynb_checkpoints
+To do.md
+DA2080
+ES2080
+preprocessed_data.pickle
+*.zip
+*.csv
+*.pdf
+__pycache__
+Estructura.md
